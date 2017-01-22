@@ -7,6 +7,11 @@ app = Flask(__name__)
 
 db = server.get_db()
 
+
+@app.route("/")
+def home():
+	return "Hello world"
+
 @app.route("/logData",methods=['POST'])
 def logout():
 	db.userdata.insert(request.get_json())
