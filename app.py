@@ -1,6 +1,7 @@
 from flask import Flask, render_template, jsonify, request
 from JSONEncoder import JSONEncoder
 from server import *
+import server
 
 app = Flask(__name__)
 
