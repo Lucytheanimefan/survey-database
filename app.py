@@ -12,7 +12,7 @@ db = server.get_db()
 
 @app.route("/")
 def home():
-	return "Hello world"
+	return render_template("index.html")
 
 @app.route("/logData",methods=['POST'])
 def logout():
