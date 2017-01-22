@@ -16,7 +16,7 @@ def home():
 
 @app.route("/logData",methods=['POST'])
 def logout():
-	db.userdata.insert(request.get_json())
+	db.data.insert(request.get_json())
 
 
 if __name__ == "__main__":
