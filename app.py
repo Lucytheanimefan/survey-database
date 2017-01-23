@@ -17,7 +17,10 @@ def home():
 @app.route("/logData",methods=['POST'])
 def logout():
 	print("-----------LOG DATA---------")
-	db.data.insert(request.get_json())
+	print request.get_json()
+	if "IceCream" in request.get_json():
+		db.data.insert(request.get_json())
+	return "Success"
 
 
 if __name__ == "__main__":
