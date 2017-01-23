@@ -16,6 +16,7 @@ def home():
 
 @app.route("/logData",methods=['POST'])
 def logout():
+	print("-----------LOG DATA---------")
 	db.data.insert(request.get_json())
 
 
